@@ -1,3 +1,12 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+# config/routes.yaml
+index_route:
+  path: /
+  controller: App\Controller\MainPageController::index
+
+blog:
+  path: /blog
+  controller: App\Controller|BlogPagesController:common
+
+article:
+  path: /blog/{slug}
+  controller: App\Controller\BlogPagesController:simple
